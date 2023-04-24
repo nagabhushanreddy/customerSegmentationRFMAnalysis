@@ -9,7 +9,6 @@ This project is a prototype of Dataanlytics for performing RFM analysis on bank 
 - Developer IDE
 - Anaconda 
 - Python 
-- FAST API (rest api)
 
 ## Developer IDE
 
