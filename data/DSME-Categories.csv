@@ -1,0 +1,25 @@
+Category1,Category2,Description
+Supply chain costs,OPEX,Supply chain costs are costs associated with the production and delivery of a product or service.
+Transportation costs,OPEX,"These costs include all expenses incurred when transporting raw materials, products and employees"
+Employee salaries and benefits,OPEX,Payroll and benefits for employees
+Business travel,OPEX,Business travel expenses are the costs incurred when employees travel for business purposes.
+Rent,OPEX,"Rent expenses include the cost of renting an office, retail space, factory or warehouse."
+IT expenses,OPEX,"IT expenses include internal and external personnel costs, owned and leased hardware costs, software as a subscription (SaaS) fees, and data and voice network costs (including subscription fees and network equipment)."
+Utilities,OPEX,"These expenses include bills like electricity, water, gas and trash collection."
+Licenses and insurance,OPEX,Business licenses and insurance are usually mandatory costs associated with running the business legally and are paid on an annual basis.
+Employee training,OPEX,Employee training expenses
+Marketing,OPEX,"Typical marketing expenses include contractor fees for freelancers and digital marketing agencies, digital ads on social media and search engines, newspaper and magazine ads, TV and radio ads, billboards, and trade show costs."
+COGS,OPEX,"Cost of Goods Sold, all short term raw material needed to produce the goods."
+Meals and entertainment ,OPEX,"These costs include all expenses incurred when food, beverages and entertainment is arranged for employees or clients."
+Consulting,OPEX,"Any payments made to consulting firms like law, accounting, business strategy etc"
+Inventory,CAPEX,Any assests brought and have value for resale or used in long term.
+Machinery,CAPEX ,"Any machinery, tools acquired to run the business."
+Real Estate,CAPEX,Any real estate expenditure incurred like construction or buying a real estate property
+Sales Revenue,Revenue,This category includes income generated from the sale of goods or services.
+Interest Income,Revenue,"This category includes income earned from interest-bearing bank accounts, loans, or other investments."
+Investment Income,Revenue,"This category includes income generated from investments in stocks, bonds, and other securities."
+Rental Income,Revenue,This category includes income earned from renting out property or equipment.
+Services Income,Revenue,This category includes income received for services rendered to customer.
+Other Income,Revenue,"This category includes any other types of income that do not fit into the above categories, such as grants, donations, or royalties."
+Other Incoming,Other Incoming,Any other income.
+Other Outgoing,Other Outgoing,Any other expense.
