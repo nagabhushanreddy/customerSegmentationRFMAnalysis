@@ -41,7 +41,7 @@ conda 22.11.1
 
 ## Install required libraries
 
-Below also installs required python version and creates a python environment named `CustomerSegmentation` 
+Below also installs required python version and creates a python environment named `customerSegmentation` 
 
 ```commandline
 cd <<project-home-director>>
@@ -51,10 +51,10 @@ cd <<project-home-director>>
 conda env create -f environment.yml
 ```
 
-Switch to python environment `TransactionClassification`  
+Switch to python environment `customerSegmentation`  
 
 ```commandline
-conda activate CustomerSegmentation
+conda activate customerSegmentation
 ```
 
 ## Steps to run or use proto-type solution for customer segmentation with RFM
@@ -67,11 +67,70 @@ conda activate CustomerSegmentation
 
 Configuration is placed in file ./conf/app.ini and follow .ini file syntax with various sections. 
 
+* Below are two important configurations and they should be intuitive to understand. 
+* The output shall have additional fields adds like RFM score, Cohort-Index to cross validate and for plotting. 
+
+
+```
+[INPUT]
+transaction_data=./data/input/SME_training_transaction_data.csv
+customer_data=./data/input/customer_data.csv
+
+[OUTPUT]
+transaction_data=./data/output/customer_transaction_data.csv
+customer_data=./data/output/customer_data.csv
+```
+
+Input data fields for each file as as shown below.
+
+```
+customer_data
+    #   Column                         Non-Null Count  Dtype 
+    ---  ------                         --------------  ----- 
+    0   customerID                     2000 non-null   int64 
+    1   customerName                   2000 non-null   object
+    2   customerAge                    2000 non-null   int64 
+    3   customerGender                 2000 non-null   object
+    4   customerLocation               2000 non-null   object
+    5   customerEducation              2000 non-null   object
+    6   customerIndustry               2000 non-null   object
+    7   customerAuthorizedSignatories  2000 non-null   object
+ 
+transaction_data
+    #   Column                Non-Null Count   Dtype         
+    ---  ------                --------------   -----         
+    0   transactionReference  143860 non-null  object        
+    1   transactionDate       143860 non-null  datetime64[ns]
+    2   payeeAccountNumber    143860 non-null  int64         
+    3   payeeName             143860 non-null  object        
+    4   payeeIndustry         0 non-null       float64       
+    5   transactionCode       143860 non-null  object        
+    6   amount                143860 non-null  float64       
+    7   indicator             143860 non-null  object        
+    8   transferNotes         116478 non-null  object        
+    9   transactionCategory   143860 non-null  object        
+    10  customerID            143860 non-null  int64      
+ ```
+
 ### Usage 
+
+The Customer segemetation tool can be run as a Jupyter notebook from IDE and more explaination is provided in notebook. Alternatively run the python script as below. 
+
+```
+python ./CustomerSegmentation.py
+
+```
 
 
 ### Helper tools
 
+1. Generating Training data
+
+Run the script below for generating training data real quick, this is helpful for understanding the prototype and it is highly recommended to use actual data for evaluation and not data from this tool.
+
+```
+python ./trainingDataGenerator.py 
+```
 
 ## Disclaimer 
 
