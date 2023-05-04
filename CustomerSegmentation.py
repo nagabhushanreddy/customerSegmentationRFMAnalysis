@@ -267,16 +267,16 @@ datamart.groupby('RFM_Score').agg({
 
 # %%
 def segment_me(datamart):
-    if datamart['RFM_Score']>=12 :
+    if datamart['RFM_Score']>=11 :
         return 'MVC'
     if(datamart['RFM_Score']>=9) and datamart['RFM_Score']<11:
         return 'Loyal '
     if(datamart['RFM_Score']>=7) and datamart['RFM_Score']<9:
         return 'Potentially Loyal'
     elif(datamart['RFM_Score']>=4) and datamart['RFM_Score']<6:
-        return 'Churned Folk'
+        return 'Need Attention' 
     else:
-        return  'Need Attention'
+        return 'Churned Folk'
 
 # %%
 datamart['General_Segment']=datamart.apply(segment_me,axis=1)    
